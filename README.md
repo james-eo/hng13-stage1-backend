@@ -22,7 +22,7 @@ A RESTful API service that analyzes strings and stores their computed properties
 1. **Clone the repository**
 
    ```bash
-   git clone <your-repo-url>
+   git clone git@github.com:james-eo/hng13-stage1-backend.git
    cd backend/stage1
    ```
 

@@ -8,7 +8,31 @@ from .models.file_storage import FileStorage
 from .utils.nlp_parser import parse_natural_language
 import json
 
-app = FastAPI()
+app = FastAPI(
+    title="String Analyzer API",
+    description="""
+    A RESTful API service that analyzes strings and stores their computed properties.
+    
+    ## Features
+    * Create and analyze strings
+    * Retrieve stored strings
+    * Filter strings by various criteria
+    * Natural language query support
+    * Delete strings
+    
+    ## String Properties Computed
+    * Length
+    * Palindrome detection (case-insensitive)
+    * Unique character count
+    * Word count
+    * SHA-256 hash
+    * Character frequency mapping
+    """,
+    version="1.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc",
+    openapi_url="/openapi.json"
+)
 storage = FileStorage()
 
 
